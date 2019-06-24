@@ -8,8 +8,7 @@ For now it's only support for android
 # Prerequisites
 You must install the following library to your react native project
 
-1. moment
-2. RNFetchBlob (optional) if you want to print with image
+1. RNFetchBlob (optional) if you want to print with image
 
 ## Getting started
 
@@ -21,12 +20,9 @@ You must install the following library to your react native project
 
 ### Manual installation
 
-<!-- #### iOS
+#### iOS
 
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-pos-printer` and add `RNPosPrinter.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNPosPrinter.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)< -->
+Still not supported yet
 
 #### Android
 
@@ -43,58 +39,64 @@ You must install the following library to your react native project
       compile project(':react-native-pos-printer')
   	```
 
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNPosPrinter.sln` in `node_modules/react-native-pos-printer/windows/RNPosPrinter.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Pos.Printer.RNPosPrinter;` to the usings at the top of the file
-  - Add `new RNPosPrinterPackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
 ## Usage
 ```javascript
 import RNPosPrinter from 'react-native-pos-printer';
 ```
 
 ### Init Printer
-for the first time need to initialize the pos printer, the return will be `Promise<void>`
+For the first time need to initialize the pos printer, the return will be `Promise<void>`
 `RNPosPrinter.init(true);`
 #### Option
 `isDebug: boolean //default false`
 
+
+
 ### Get All Printer Devices
-to get all printer devices you just need to call this one, the return will be `Promise<Printer[]>`
+To get all printer devices you just need to call this one, the return will be `Promise<Printer[]>`
 `RNPosPrinter.getDevices()`
 
+
+
 ### Scan Device
-to scan all devices printer, the return will be `Promise<boolean>`
+To scan all devices printer, the return will be `Promise<boolean>`
 `RNPosPrinter.scanDevices(callback);`
 #### Option
 `callback: Callback`
 
+
+
 ### Stop Scan Device
-to stop scanning all devices printer, the return will be `Promise<boolean>`
+To stop scanning all devices printer, the return will be `Promise<boolean>`
 `RNPosPrinter.stopScanDevices();`
 
+
+
 ### Connect Device
-to connect to specific pos printer, the return will be `Promise<any>`
+To connect to specific pos printer, the return will be `Promise<any>`
 `RNPosPrinter.connectDevice(deviceId, timeout);`
 #### Option
 `deviceId: string`
 `timeout: number //default 30000 ms`
 
+
+
 ### Connect And Print
-to connect and automatically print on specific pos printer, the return will be `Promise<any>`
+To connect and automatically print on specific pos printer, the return will be `Promise<any>`
 `RNPosPrinter.connectAndPrintReceipt(deviceId);`
 #### Option
 `deviceId: string`
 
+
+
 ### Print Example
-to print on pos printer
+To print on pos printer
 `RNPosPrinter.printTestReceipt(true);`
 #### Option
 `storageUrl: string //optional, if want to print image`
 
+
+
 ### Misc
-if you want to use directly the printer command you can access on 
+If you want to use directly the printer command you can access on 
 `RNPosPrinter.printerModule`
