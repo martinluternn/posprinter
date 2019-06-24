@@ -46,57 +46,82 @@ import RNPosPrinter from 'react-native-pos-printer';
 
 ### Init Printer
 For the first time need to initialize the pos printer, the return will be `Promise<void>`
-`RNPosPrinter.init(true);`
+```javascript
+RNPosPrinter.init(true);
+```
 #### Option
-`isDebug: boolean //default false`
+```javascript
+isDebug: boolean //default false
+```
 
 
 
 ### Get All Printer Devices
 To get all printer devices you just need to call this one, the return will be `Promise<Printer[]>`
-`RNPosPrinter.getDevices()`
-
+```javascript
+RNPosPrinter.getDevices()
+```
 
 
 ### Scan Device
 To scan all devices printer, the return will be `Promise<boolean>`
-`RNPosPrinter.scanDevices(callback);`
+```javascript
+RNPosPrinter.scanDevices(callback);
+```
 #### Option
-`callback: Callback`
+```javascript
+callback: Callback
+```
 
 
 
 ### Stop Scan Device
 To stop scanning all devices printer, the return will be `Promise<boolean>`
-`RNPosPrinter.stopScanDevices();`
+```javascript
+RNPosPrinter.stopScanDevices();
+```
 
 
 
 ### Connect Device
 To connect to specific pos printer, the return will be `Promise<any>`
-`RNPosPrinter.connectDevice(deviceId, timeout);`
+```javascript
+RNPosPrinter.connectDevice(deviceId, timeout);
+```
 #### Option
-`deviceId: string`
-`timeout: number //default 30000 ms`
+```javascript
+deviceId: string
+timeout: number //default 30000 ms
+```
 
 
 
 ### Connect And Print
 To connect and automatically print on specific pos printer, the return will be `Promise<any>`
-`RNPosPrinter.connectAndPrintReceipt(deviceId);`
+```javascript
+RNPosPrinter.connectAndPrintReceipt(deviceId);
+```
 #### Option
-`deviceId: string`
+```javascript
+deviceId: string
+```
 
 
 
 ### Print Example
 To print on pos printer
-`RNPosPrinter.printTestReceipt(true);`
+```javascript
+RNPosPrinter.printTestReceipt(storageUrl);
+```
 #### Option
-`storageUrl: string //optional, if want to print image`
+```javascript
+storageUrl: string //optional, if want to print image
+```
 
 
 
 ### Misc
 If you want to use directly the printer command you can access on 
-`RNPosPrinter.printerModule`
+```javascript
+RNPosPrinter.printerModule
+```
