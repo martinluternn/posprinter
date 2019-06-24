@@ -1,6 +1,6 @@
 {
     "name": "react-native-pos-printer",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "library for pos printer on react native",
     "main": "dist/index.js",
     "scripts": {
@@ -10,9 +10,9 @@
         "push": "git add .; git commit -m \"git push\"; git push origin master;"
     },
     "keywords": [
-      "react-native",
-      "POS",
-      "printer"
+        "react-native",
+        "POS",
+        "printer"
     ],
     "author": "martinlutern",
     "license": "MIT",
@@ -25,5 +25,4 @@
         "typescript": "^3.3.3"
     },
     "nativePackage": true
-  }
-  
+}
