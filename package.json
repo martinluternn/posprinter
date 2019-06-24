@@ -1,0 +1,53 @@
+{
+    "name": "react-native-pos-printer",
+    "version": "1.0.0",
+    "description": "library for pos printer on react native",
+    "main": "dist/index.js",
+    "scripts": {
+        "lint": "tslint --project tsconfig.json",
+        "lint-fix": "tslint --fix -c tslint.json 'src/**/*.ts'",
+        "build": "rm -rf dist; tsc",
+        "push": "git add .; git commit -m \"git push\"; git push origin master;",
+        "test": "jest -u --verbose --coverage src/"
+    },
+    "keywords": [
+        "react-native",
+        "POS",
+        "printer"
+    ],
+    "author": "martinlutern",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/jest": "^24.0.15",
+        "@types/moment": "^2.13.0",
+        "@types/react-native": "^0.57.36",
+        "jest": "^24.8.0",
+        "moment": "^2.24.0",
+        "react-native": "^0.58.4",
+        "rn-fetch-blob": "^0.10.15",
+        "ts-jest": "^24.0.2",
+        "ts-node": "^8.3.0",
+        "tslint": "^5.12.1",
+        "typescript": "^3.3.3"
+    },
+    "nativePackage": true,
+    "jest": {
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js"
+        ],
+        "transform": {
+            "^.+\\.(js)$": "ts-node",
+            "\\.(ts|tsx)$": "ts-jest"
+        },
+        "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+        "testPathIgnorePatterns": [
+            "\\.snap$",
+            "<rootDir>/node_modules/"
+        ]
+    },
+    "dependencies": {
+        "np": "^5.0.3"
+    }
+}

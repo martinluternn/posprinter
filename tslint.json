@@ -1,0 +1,53 @@
+{
+    "extends": "tslint:recommended",
+    "rules": {
+        "space-before-function-paren": [ false, {
+            "anonymous": "always",
+            "named": "always",
+            "asyncArrow": "always"
+        }],
+        "quotemark": [
+            true,
+            "single",
+            "jsx-double"
+        ],
+        "curly": false,
+        "trailing-comma": [
+            true,
+            {
+                "multiline": "always",
+                "singleline": "never",
+                "esSpecCompliant": true
+            }
+        ],
+        "interface-name": [
+            false
+        ],
+        "no-namespace" : false,
+        "ordered-imports": true,
+        "object-literal-sort-keys": false,
+        "arrow-parens": [
+            true,
+            "ban-single-arg-parens"
+        ],
+        "member-access": false,
+        "variable-name": [
+            true,
+            "allow-leading-underscore",
+            "allow-pascal-case"
+        ],
+        "max-classes-per-file": false,
+        "no-duplicate-imports": true,
+        "no-unused-expression": [
+            true,
+            "allow-fast-null-checks"
+        ]
+    },
+    "jsRules": {},
+    "linterOptions": {
+        "exclude": [
+            "node_modules/**/*",
+            "**/*.js"
+        ]
+    }
+}
