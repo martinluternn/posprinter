@@ -9,6 +9,10 @@
         "build": "rm -rf dist; tsc",
         "push": "git add .; git commit -m \"git push\"; git push origin master;"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/martinluternn/posprinter"
+    },
     "keywords": [
         "react-native",
         "POS",
